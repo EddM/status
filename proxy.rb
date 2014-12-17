@@ -9,5 +9,6 @@ configure do
 end
 
 post "/builds" do
+  logger.warn params.inspect
   payload_data = JSON.parse(params[:payload])
 end
