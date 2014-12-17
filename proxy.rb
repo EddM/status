@@ -2,9 +2,8 @@ require "sinatra"
 require "json"
 
 configure do
-  # logging is enabled by default in classic style applications,
-  # so `enable :logging` is not needed
-  file = File.new("#{settings.root}/log/#{settings.environment}.log", 'a+')
+  Dir.mkdir("#{settings.root}/log") unless File.exist?("#{settings.root}/log")
+  file = File.new("#{settings.root}/log/#{settings.environment}.log", "a+")
   file.sync = true
   use Rack::CommonLogger, file
 end
