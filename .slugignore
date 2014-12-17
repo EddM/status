@@ -1,4 +1,6 @@
+*.bin
 *.cpp
 *.h
-/spec
 *.example
+/spec
+/schematic
