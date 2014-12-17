@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/config_file"
 require "json"
+require "httparty"
 
 config_file "config.yml"
 
