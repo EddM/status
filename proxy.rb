@@ -10,5 +10,6 @@ end
 
 post "/builds" do
   logger.warn params.inspect
+  logger.warn JSON.parse(request.body.read)
   payload_data = JSON.parse(params[:payload])
 end
