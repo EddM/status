@@ -15,7 +15,7 @@ Continuous Integration status light I built for funzies. At the moment it only w
 
 1. Get your SparkCore online and install the [CLI tools](http://docs.spark.io/cli/)
 2. Connect the RGB LED to your Spark Core via 270Ω resistors (see below)
-3. Configure the proxy service with your Spark access token and device ID (see `config.yml.example`)
+3. Set the `DEVICE_ID` and `ACCESS_TOKEN` env vars (get these from Spark)
 4. Deploy the proxy web service somewhere
 
         $ bundle install

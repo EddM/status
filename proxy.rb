@@ -1,9 +1,6 @@
 require "sinatra"
-require "sinatra/config_file"
 require "json"
 require "httparty"
-
-config_file "config.yml"
 
 configure do
   Dir.mkdir("#{settings.root}/log") unless File.exist?("#{settings.root}/log")
@@ -25,8 +22,8 @@ post "/builds" do
         function_name = "setUnknown"
       end
 
-      base_url = "https://api.spark.io/v1/devices/#{settings.device_id}"
-      HTTParty.post("#{base_url}/#{function_name}", body: { "access_token" => settings.access_token })
+      base_url = "https://api.spark.io/v1/devices/#{ENV["DEVICE_ID"]}"
+      HTTParty.post("#{base_url}/#{function_name}", body: { "access_token" => ENV["ACCESS_TOKEN"] })
     end
   end
 end
