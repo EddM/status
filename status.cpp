@@ -38,6 +38,7 @@ void setup() {
 
   Spark.function("setOK", setOK);
   Spark.function("setError", setError);
+  Spark.function("setUnknown", setUnknown);
 }
 
 void loop() {
