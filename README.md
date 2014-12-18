@@ -1,6 +1,8 @@
 # Status
 
-Continuous Integration status light I built for funzies. At the moment it only works with [CircleCI](http://www.circleci.com).
+Continuous Integration status light I built for funzies. At the moment it only works with [CircleCI](http://www.circleci.com). Red light for epic fail, green for all-clear.
+
+![Photo](http://i.imgur.com/PDvMhhNl.jpg)
 
 ## Requirements
  * 1 x [SparkCore](http://www.spark.io)
